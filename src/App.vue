@@ -7,21 +7,23 @@
     <my-list :premium="premium" v-on:add-to-cart="updateCart"></my-list>
     <grupo4 :premium="premium" v-on:add-to-cart="updateCart"></grupo4>
     <watch :premium="premium" v-on:add-to-cart-with-watch="updateCart"></watch>
-    <productRelogio :premium="premium" v-on:add-to-cart="updateCart"></productRelogio>
+    <productRelogio
+      :premium="premium"
+      v-on:add-to-cart="updateCart"
+    ></productRelogio>
     <grupo5></grupo5>
     <shirt :premium="premium" v-on:add-to-cart="updateCart"></shirt>
   </div>
 </template>
 
 <script>
-
-import Product from './components/Product.vue';
-import myList from './components/myList.vue'
-import Grupo4 from './components/Grupo4.vue';
-import Watch from './components/Watch.vue';
+import Product from "./components/Product.vue";
+import myList from "./components/myList.vue";
+import Grupo4 from "./components/Grupo4.vue";
+import Watch from "./components/Watch.vue";
 import ProductRelogio from "./components/ProductRelogio.vue";
 import Grupo5 from "./components/Grupo5.vue";
-import Shirt from './components/Shirt.vue';
+import Shirt from "./components/Shirt.vue";
 
 export default {
   name: "App",
@@ -38,13 +40,13 @@ export default {
     watch: Watch,
     productRelogio: ProductRelogio,
     grupo5: Grupo5,
-    shirt: Shirt
+    shirt: Shirt,
   },
   methods: {
     updateCart(id) {
       this.cart.push(id);
     },
-  }
+  },
 };
 </script>
 

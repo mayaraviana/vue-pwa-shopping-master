@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Shopping from "../views/Shopping.vue";
-import News from "../views/News.vue";
 
 // 1. Use Vue Router
 Vue.use(VueRouter);
@@ -16,20 +15,6 @@ const routes = [
     path: "/",
     name: "Shopping",
     component: Shopping
-  },
-  {
-    path: "/about",
-    name: "About",
-    // 3. route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  },
-  {
-    path: "/news",
-    name: "News",
-    component: News
   }
 ];
 
